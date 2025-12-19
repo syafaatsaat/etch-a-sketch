@@ -13,10 +13,8 @@ function generateGrid(numOfSquares = 16) {
     for (let x = 0; x < numOfSquares; ++x) {
         for (let y = 0; y < numOfSquares; ++y) {
             const square = document.createElement("div");
-            square.setAttribute(
-                "style", 
-                "width: " + size + "%; height: " + size + "%;"
-            );
+            square.style.width = size + "%";
+            square.style.height = size + "%";
             square.classList.add("square");
             gridContainer.appendChild(square);
         }
@@ -42,6 +40,10 @@ gridContainer.addEventListener("mouseover", (event) => {
     if (target.classList.contains("square")) {
         let randomColor = getRandomColor();
         target.style.backgroundColor = randomColor;
+        
+        const compStyles = window.getComputedStyle(target);
+        let newOpacity = compStyles.getPropertyValue("opacity") - 0.1;
+        target.style.opacity = newOpacity >= 0 ? newOpacity : 0;
     }
 });
 

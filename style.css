@@ -14,12 +14,13 @@ body, #grid {
     height: 80%;
     aspect-ratio: 1/1;
     flex-wrap: wrap;
-    /* background-color: gray; */
-    border: 1px solid black;
+    background-color: black;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .square {
     background-color: white;
+    opacity: 1;
 }
 
 .square-hover {
