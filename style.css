@@ -1,25 +1,25 @@
 html, body {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 body, #grid {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 #grid {
     height: 80%;
     aspect-ratio: 1/1;
     flex-wrap: wrap;
-    background-color: gray;
+    /* background-color: gray; */
+    border: 1px solid black;
 }
 
 .square {
-    width: 6.25%;
-    height: 6.25%;
-    background-color: #00FF00;
+    background-color: white;
 }
 
 .square-hover {
