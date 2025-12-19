@@ -1,0 +1,23 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body, #grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid {
+    height: 80%;
+    aspect-ratio: 1/1;
+    flex-wrap: wrap;
+    background-color: gray;
+}
+
+.square {
+    width: 6.25%;
+    height: 6.25%;
+    background-color: #00FF00;
+}
