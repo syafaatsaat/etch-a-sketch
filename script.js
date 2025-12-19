@@ -23,27 +23,25 @@ function generateGrid(numOfSquares = 16) {
     }
 }
 
-function setupHoverEvents() {
-    for (let square of gridContainer.children) {
-        square.addEventListener("mouseover", (event) => {
-            console.log("Mouse is over me!!!");
-            square.classList.add("square-hover");
-        });
-
-        square.addEventListener("mouseout", (event) => {
-            console.log("Mouse has left me!!!");
-            square.classList.remove("square-hover");
-        });
-    }
-}
-
 generateGrid();
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+
+    return color;
+}
 
 gridContainer.addEventListener("mouseover", (event) => {
     let target = event.target;
 
     if (target.classList.contains("square")) {
-        target.classList.add("square-hover");
+        let randomColor = getRandomColor();
+        target.style.backgroundColor = randomColor;
     }
 });
 
