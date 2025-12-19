@@ -1,5 +1,6 @@
 const gridContainer = document.querySelector("#grid");
 const settingsContainer = document.querySelector("#settings");
+const gridText = document.querySelector("#grid-text");
 let currentNumOfSquares = 16;
 
 function generateGrid(numOfSquares = 16) {
@@ -9,6 +10,7 @@ function generateGrid(numOfSquares = 16) {
 
     currentNumOfSquares = numOfSquares;
     let size = 100 / numOfSquares;
+    gridText.textContent = numOfSquares + " x " + numOfSquares;
 
     for (let x = 0; x < numOfSquares; ++x) {
         for (let y = 0; y < numOfSquares; ++y) {
