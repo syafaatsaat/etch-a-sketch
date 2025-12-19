@@ -1,6 +1,7 @@
 html, body {
     height: 100vh;
     width: 100vw;
+    color: white;
 }
 
 body, #grid {
@@ -10,12 +11,49 @@ body, #grid {
     margin: 0;
 }
 
+body {
+    flex-direction: column;
+    gap: 20px;
+    background-color: #282828;
+}
+
+p {
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 64px;
+}
+
+button {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    border: 5px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 5px 20px;
+}
+
+#settings p {
+    margin: 0;
+}
+
 #grid {
     height: 80%;
     aspect-ratio: 1/1;
     flex-wrap: wrap;
     background-color: black;
-    border: 1px solid rgb(0, 0, 0);
+    border: 5px solid rgb(0, 0, 0);
+}
+
+#settings {
+    display: flex;
+    justify-content: space-between;
+    width: 80vh;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .square {
