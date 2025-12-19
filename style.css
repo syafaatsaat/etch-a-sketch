@@ -21,3 +21,7 @@ body, #grid {
     height: 6.25%;
     background-color: #00FF00;
 }
+
+.square-hover {
+    background-color: black;
+}
