@@ -68,7 +68,8 @@ function getUserInput() {
 function resetGrid() {
     for (let square of gridContainer.children) {
         if (square.classList.contains("square")) {
-            square.classList.remove("square-hover");
+            square.style.backgroundColor = "#FFFFFF";
+            square.style.opacity = 1;
         }
     }
 }
