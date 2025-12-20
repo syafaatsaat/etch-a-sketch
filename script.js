@@ -1,5 +1,5 @@
 const gridContainer = document.querySelector("#grid");
-const settingsContainer = document.querySelector("#settings");
+const topSettingsContainer = document.querySelector("#top-settings");
 const gridText = document.querySelector("#grid-text");
 let currentNumOfSquares = 16;
 
@@ -74,7 +74,7 @@ function resetGrid() {
     }
 }
 
-settingsContainer.addEventListener("click", (event) => {
+topSettingsContainer.addEventListener("click", (event) => {
     let target = event.target;
 
     switch (target.id) {

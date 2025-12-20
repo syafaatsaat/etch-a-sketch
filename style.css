@@ -4,7 +4,7 @@ html, body {
     color: white;
 }
 
-body, #grid {
+body, #grid, #right-side {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,30 +12,40 @@ body, #grid {
 }
 
 body {
-    flex-direction: column;
     gap: 20px;
     background-color: #282828;
 }
 
+#right-side {
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+}
+
 p {
-    font-family: "Micro 5", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 64px;
+    font-variation-settings: "wdth" 100;
+    font-size: 32px;
 }
 
 button {
-    font-family: "Jersey 10", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 40px;
-    border: 5px solid white;
+    font-variation-settings: "wdth" 100;
+    font-size: 32px;
+    border: 2px solid white;
+    border-radius: 10px;
     background-color: transparent;
     color: white;
     padding: 5px 20px;
 }
 
-#settings p {
+#top-settings p {
     margin: 0;
 }
 
@@ -47,7 +57,7 @@ button {
     border: 5px solid rgb(0, 0, 0);
 }
 
-#settings {
+#top-settings {
     display: flex;
     justify-content: space-between;
     width: 80vh;
